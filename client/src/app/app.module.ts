@@ -6,15 +6,19 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { FeedComponent } from './feed/feed.component';
 import { NavService } from './services/nav.service';
+import { FeedlistComponent } from './feedlist/feedlist.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    FeedComponent
+    FeedlistComponent
+
+
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,7 @@ import { NavService } from './services/nav.service';
     RouterModule.forRoot([
       { path : '', redirectTo : 'Home', pathMatch : 'full'},
       { path : 'Home', component : HomeComponent},
-      { path : 'Feed', component : FeedComponent}
+      { path : 'Feedlist', component : FeedlistComponent}
     ])
   ],
   providers: [
